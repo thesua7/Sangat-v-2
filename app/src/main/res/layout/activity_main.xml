@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    tools:openDrawer="start">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/conslayout"
+        tools:context=".MainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+
+
+        >
+
+        <ImageButton
+            android:id="@+id/indiajar"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:layout_marginBottom="188dp"
+            android:background="@null"
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.27999997"
+            app:srcCompat="@drawable/india" />
+
+        <ImageButton
+            android:id="@+id/bdjar"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:layout_marginBottom="188dp"
+            android:background="@null"
+
+            android:contentDescription="@string/todo"
+
+            android:stateListAnimator="@null"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.26"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.27999997"
+            app:srcCompat="@drawable/bd" />
+
+
+        <ImageButton
+            android:id="@+id/pakistanjar"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:layout_marginBottom="188dp"
+            android:background="@null"
+
+            android:contentDescription="@string/todo"
+
+            android:stateListAnimator="@null"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.27999997"
+            app:srcCompat="@drawable/pakistan" />
+
+        <ImageButton
+            android:id="@+id/srilanka"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:layout_marginBottom="188dp"
+            android:background="@null"
+            android:contentDescription="@string/todo"
+
+            android:stateListAnimator="@null"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.74"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.27999997"
+            app:srcCompat="@drawable/srilanka" />
+
+
+        <ImageButton
+            android:id="@+id/bhutanjar"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:layout_marginBottom="188dp"
+            android:background="@null"
+            android:contentDescription="@string/todo"
+
+            android:stateListAnimator="@null"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.51"
+            app:srcCompat="@drawable/bhutan" />
+
+        <ImageButton
+            android:id="@+id/nepaljar"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:layout_marginBottom="188dp"
+            android:background="@null"
+            android:contentDescription="@string/todo"
+
+            android:stateListAnimator="@null"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.98"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.27999997"
+            app:srcCompat="@drawable/nepal" />
+
+
+        <ImageButton
+            android:id="@+id/maldivesjar"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:layout_marginBottom="188dp"
+            android:background="@null"
+            android:contentDescription="@string/todo"
+
+            android:stateListAnimator="@null"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.51"
+            app:srcCompat="@drawable/maldivs" />
+
+
+        <ImageButton
+            android:id="@+id/room1"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.82"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
+            android:id="@+id/room2"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.26"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.82"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+
+        <ImageButton
+            android:id="@+id/room3"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.82"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+
+        <ImageButton
+            android:id="@+id/room4"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.74"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.82"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
+            android:id="@+id/room5"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.98"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.82"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
+            android:id="@+id/room6"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.97"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
+            android:id="@+id/room7"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.26"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.97"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
+            android:id="@+id/room8"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.97"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
+            android:id="@+id/room9"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.739"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.97"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
+            android:id="@+id/room10"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.979"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.97"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <androidx.appcompat.widget.Toolbar
+
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@color/MaterialBlack"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+
+            tools:targetApi="lollipop"/>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+
+        android:id="@+id/nav_view"
+        android:layout_width="170dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/MaterialBlack"
+        app:headerLayout="@layout/head_nav"
+        app:itemTextColor="@color/design_default_color_background"
+        app:menu="@menu/menu"
+
+
+        >
+
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
