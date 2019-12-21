@@ -6,9 +6,13 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.database.Cursor;
+import android.hardware.Sensor;
+import android.hardware.SensorManager; //package for android hardware
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -32,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
    private Dialog myDialog;
            ActionBarDrawerToggle actionBarDrawerToggle;
 
+   private Sensor gyroscope; //gyroscope object
+   private SensorManager sensorManager;
+
    private ImageButton india,bd,pakistan,srilanka,maldives,nepal,bhutan;
 
 
@@ -40,6 +47,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sensorManager= (SensorManager) getSystemService(SENSOR_SERVICE);// getting all available sensors
+        gyroscope=sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE); // getting only gyroscope
+        if(gyroscope==null)
+        {
+            Toast.makeText(this,"this device has no gyroscope sensor",Toast.LENGTH_SHORT).show();
+            finish();
+        }
+
+        else{
+            Toast.makeText(this,"this device has gyroscope sensor",Toast.LENGTH_SHORT).show();
+        }
 
 
         myDialog = new Dialog(this);//Declaring Dialog
@@ -204,17 +222,36 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Boolean flag =myDB.insertData(fullname.getText().toString(),email.getText().toString(),phone.getText().toString(),n,city.getText().toString(),passport.getText().toString(),organization.getText().toString(),sponsorship.getText().toString());
                 if(flag==true){
-                    display.setText("Added");
+                    Toast.makeText(MainActivity.this,"Added!!",Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    display.setText("Not Added");//FOR TESTING
+                    Toast.makeText(MainActivity.this,"Not Added!!",Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
 
+        Cursor cur = myDB.getAllData();
 
+        if(cur.getCount()==0){
 
+            display.setText("No data found");
+
+        }
+
+        StringBuffer buffer = new StringBuffer();
+
+        while(cur.moveToNext()){
+            buffer.append("ID: "+cur.getString(0)+"\n");
+            buffer.append("NAME: "+cur.getString(1)+"\n");
+            buffer.append("CONTACT NUMBER: "+cur.getString(2)+"\n");
+            buffer.append("EMAIL: "+cur.getString(3)+"\n");
+
+        }
+
+        display.setText(buffer.toString());
+
+        display.setMovementMethod(new ScrollingMovementMethod());
 
 
     }
