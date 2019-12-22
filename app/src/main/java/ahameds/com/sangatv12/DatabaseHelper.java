@@ -23,6 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static String Col_7 = "PASSPORT";
     public static String Col_8 = "ORGANIZATION";
     public static String Col_9 = "SPONSORSHIP";
+    public static String Col_10 = "AGE";
 
 
 
@@ -34,7 +35,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table "+TABLE_NAME+" (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, CONTACTNUMBER TEXT, EMAIL TEXT, NATIONALITY TEXT, CITY TEXT, PASSPORT TEXT, ORGANIZATION TEXT, SPONSORSHIP TEXT)");
+        db.execSQL("create table "+TABLE_NAME+" (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, CONTACTNUMBER TEXT, EMAIL TEXT, NATIONALITY TEXT, CITY TEXT, PASSPORT TEXT, ORGANIZATION TEXT, SPONSORSHIP TEXT, AGE TEXT)");
 
     }
 
@@ -45,7 +46,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public boolean insertData(String name,String email,String contactNumber,String nation,String city,String passport,String organization,String sponsorship){
+    public boolean insertData(String name,String email,String contactNumber,String nation,String city,String passport,String organization,String sponsorship,String age){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(Col_2,name);
@@ -57,6 +58,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(Col_7,passport);
         contentValues.put(Col_8,organization);
         contentValues.put(Col_9,sponsorship);
+        contentValues.put(Col_10,age);
 
         long success = db.insert(TABLE_NAME,null,contentValues);
 
@@ -76,4 +78,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cur = db.rawQuery("select * from "+TABLE_NAME,null);
         return cur;
     }
+
+
+    public Cursor getDataByCountry(String Country){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from "+TABLE_NAME+" where NATIONALITY =?",new String[]{Country});
+        return cursor;
+    }
+
+
+
+
 }
