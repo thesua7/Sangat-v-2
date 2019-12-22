@@ -24,6 +24,184 @@
         >
 
         <ImageButton
+            android:id="@+id/room2"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.26"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.52"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
+            android:id="@+id/room5"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.979"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.52"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
+            android:id="@+id/room3"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.52"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
+            android:id="@+id/room1"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.52"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
+            android:id="@+id/room4"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.739"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.52"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
+            android:id="@+id/room9"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.739"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.669"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
+            android:id="@+id/room7"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.26"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.669"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
+            android:id="@+id/room6"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.66999996"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
+            android:id="@+id/room8"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.669"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
+            android:id="@+id/room10"
+            android:layout_width="73dp"
+            android:layout_height="86dp"
+            android:background="@null"
+
+
+            android:contentDescription="@string/todo"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.979"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.669"
+            app:srcCompat="@drawable/home"
+            tools:targetApi="lollipop" />
+
+        <ImageButton
             android:id="@+id/indiajar"
             android:layout_width="73dp"
             android:layout_height="86dp"
@@ -109,10 +287,9 @@
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintHorizontal_bias="0.378"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.51"
             app:srcCompat="@drawable/bhutan" />
 
         <ImageButton
@@ -146,15 +323,13 @@
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintHorizontal_bias="0.618"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.51"
             app:srcCompat="@drawable/maldivs" />
 
-
         <ImageButton
-            android:id="@+id/room1"
+            android:id="@+id/room11"
             android:layout_width="73dp"
             android:layout_height="86dp"
             android:background="@null"
@@ -172,7 +347,7 @@
             tools:targetApi="lollipop" />
 
         <ImageButton
-            android:id="@+id/room2"
+            android:id="@+id/room12"
             android:layout_width="73dp"
             android:layout_height="86dp"
             android:background="@null"
@@ -191,7 +366,7 @@
 
 
         <ImageButton
-            android:id="@+id/room3"
+            android:id="@+id/room13"
             android:layout_width="73dp"
             android:layout_height="86dp"
             android:background="@null"
@@ -209,7 +384,7 @@
 
 
         <ImageButton
-            android:id="@+id/room4"
+            android:id="@+id/room14"
             android:layout_width="73dp"
             android:layout_height="86dp"
             android:background="@null"
@@ -227,7 +402,7 @@
             tools:targetApi="lollipop" />
 
         <ImageButton
-            android:id="@+id/room5"
+            android:id="@+id/room15"
             android:layout_width="73dp"
             android:layout_height="86dp"
             android:background="@null"
@@ -245,7 +420,7 @@
             tools:targetApi="lollipop" />
 
         <ImageButton
-            android:id="@+id/room6"
+            android:id="@+id/room16"
             android:layout_width="73dp"
             android:layout_height="86dp"
             android:background="@null"
@@ -262,8 +437,9 @@
             app:srcCompat="@drawable/home"
             tools:targetApi="lollipop" />
 
+
         <ImageButton
-            android:id="@+id/room7"
+            android:id="@+id/room17"
             android:layout_width="73dp"
             android:layout_height="86dp"
             android:background="@null"
@@ -281,7 +457,7 @@
             tools:targetApi="lollipop" />
 
         <ImageButton
-            android:id="@+id/room8"
+            android:id="@+id/room18"
             android:layout_width="73dp"
             android:layout_height="86dp"
             android:background="@null"
@@ -298,7 +474,7 @@
             tools:targetApi="lollipop" />
 
         <ImageButton
-            android:id="@+id/room9"
+            android:id="@+id/room19"
             android:layout_width="73dp"
             android:layout_height="86dp"
             android:background="@null"
@@ -316,7 +492,7 @@
             tools:targetApi="lollipop" />
 
         <ImageButton
-            android:id="@+id/room10"
+            android:id="@+id/room20"
             android:layout_width="73dp"
             android:layout_height="86dp"
             android:background="@null"
