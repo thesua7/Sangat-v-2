@@ -6,12 +6,14 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.AlertDialog;
 import android.database.Cursor;
 import android.hardware.Sensor;
 import android.hardware.SensorManager; //package for android hardware
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Menu;
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
    private SensorManager sensorManager;
 
    private ImageButton india,bd,pakistan,srilanka,maldives,nepal,bhutan;
+   private ImageButton r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20; //Rooms
 
 
 
@@ -166,6 +169,210 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        r1 = (ImageButton) findViewById(R.id.room1);
+        r2 = (ImageButton) findViewById(R.id.room2);
+        r3 = (ImageButton) findViewById(R.id.room3);
+        r4 = (ImageButton) findViewById(R.id.room4);
+        r5 = (ImageButton) findViewById(R.id.room5);
+        r6 = (ImageButton) findViewById(R.id.room6);
+        r7 = (ImageButton) findViewById(R.id.room7);
+        r8 = (ImageButton) findViewById(R.id.room8);
+        r9 = (ImageButton) findViewById(R.id.room9);
+        r10 = (ImageButton) findViewById(R.id.room10);
+        r11 = (ImageButton) findViewById(R.id.room11);
+        r12 = (ImageButton) findViewById(R.id.room12);
+        r13 = (ImageButton) findViewById(R.id.room13);
+        r14 = (ImageButton) findViewById(R.id.room14);
+        r15 = (ImageButton) findViewById(R.id.room15);
+        r16 = (ImageButton) findViewById(R.id.room16);
+        r17 = (ImageButton) findViewById(R.id.room17);
+        r18 = (ImageButton) findViewById(R.id.room18);
+        r19 = (ImageButton) findViewById(R.id.room19);
+        r20 = (ImageButton) findViewById(R.id.room20);
+
+
+
+
+
+        r1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                showAlert("Testing");
+
+            }
+        });
+
+        r2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        r3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        r4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        r5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        r6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        r7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+
+        r8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        r9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        r10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        r11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        r12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        r13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        r14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        r15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        r16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        r17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        r18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        r19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        r20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -220,7 +427,7 @@ public class MainActivity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Boolean flag =myDB.insertData(fullname.getText().toString(),email.getText().toString(),phone.getText().toString(),n,city.getText().toString(),passport.getText().toString(),organization.getText().toString(),sponsorship.getText().toString());
+                Boolean flag =myDB.insertData(fullname.getText().toString(),email.getText().toString(),phone.getText().toString(),n,city.getText().toString(),passport.getText().toString(),organization.getText().toString(),sponsorship.getText().toString(),age.getText().toString());
                 if(flag==true){
                     Toast.makeText(MainActivity.this,"Added!!",Toast.LENGTH_SHORT).show();
                 }
@@ -231,7 +438,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Cursor cur = myDB.getAllData();
+        Cursor cur = myDB.getDataByCountry(nation);
+
+
 
         if(cur.getCount()==0){
 
@@ -239,9 +448,11 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+
         StringBuffer buffer = new StringBuffer();
 
         while(cur.moveToNext()){
+
             buffer.append("ID: "+cur.getString(0)+"\n");
             buffer.append("NAME: "+cur.getString(1)+"\n");
             buffer.append("CONTACT NUMBER: "+cur.getString(2)+"\n");
@@ -249,11 +460,36 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        display.setText(buffer.toString());
 
-        display.setMovementMethod(new ScrollingMovementMethod());
+         display.setText(buffer.toString());
+
+         display.setMovementMethod(new ScrollingMovementMethod());
+
+//        StringBuffer buffer = new StringBuffer();
+//
+//        while(cur.moveToNext()){
+//            buffer.append("ID: "+cur.getString(0)+"\n");
+//            buffer.append("NAME: "+cur.getString(1)+"\n");
+//            buffer.append("CONTACT NUMBER: "+cur.getString(2)+"\n");
+//            buffer.append("EMAIL: "+cur.getString(3)+"\n");
+//
+//        }
+//
+//        display.setText(buffer.toString());
+//
+//        display.setMovementMethod(new ScrollingMovementMethod());
 
 
+    }
+
+
+    public void showAlert(String Data){//AlertBox
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+       // builder.setTitle(title);
+         builder.setTitle(Html.fromHtml("<font color='#F9A44F'>Peoples</font>"));
+        builder.setMessage(Data);
+        builder.show();
     }
 
 
