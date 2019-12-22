@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-
+import android.content.Context;
 import android.database.Cursor;
 import android.hardware.Sensor;
 import android.hardware.SensorManager; //package for android hardware
@@ -25,7 +25,9 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.hardware.SensorManager; //package for android hardware
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,8 +38,10 @@ public class MainActivity extends AppCompatActivity {
    private Dialog myDialog;
            ActionBarDrawerToggle actionBarDrawerToggle;
 
-   private Sensor gyroscope; //gyroscope object
-   private SensorManager sensorManager;
+    private SensorManager mSensorManager;
+    private float accelVal;
+    private float accelLast;
+    private float shake;
 
    private ImageButton india,bd,pakistan,srilanka,maldives,nepal,bhutan;
 
@@ -47,18 +51,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        sensorManager= (SensorManager) getSystemService(SENSOR_SERVICE);// getting all available sensors
-        gyroscope=sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE); // getting only gyroscope
-        if(gyroscope==null)
-        {
-            Toast.makeText(this,"this device has no gyroscope sensor",Toast.LENGTH_SHORT).show();
-            finish();
-        }
-
-        else{
-            Toast.makeText(this,"this device has gyroscope sensor",Toast.LENGTH_SHORT).show();
-        }
-
+        // ShakeDetector initialization
+        mSensorManager=(SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        mSensorManager.registerListener(sensorListener,mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),SensorManager.SENSOR_DELAY_NORMAL);
+        accelVal=SensorManager.GRAVITY_EARTH;
+        accelLast=SensorManager.GRAVITY_EARTH;
+        shake=0.00f;
 
         myDialog = new Dialog(this);//Declaring Dialog
         myDB = new DatabaseHelper(this);//DB OBJECT
@@ -170,6 +168,30 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    private final SensorEventListener sensorListener=new SensorEventListener(){
+
+        @Override
+        public void onSensorChanged(SensorEvent event) {
+            float x=event.values[0];
+            float y=event.values[1];
+            float z=event.values[2];
+            accelLast=accelVal;
+            accelVal=(float) Math.sqrt((double)(x*x+y*y+z*z));
+            float delta=accelVal-accelLast;
+            shake=shake * 0.9f+delta;
+            if(shake>8.00){
+                System.out.println("Do not shake me");
+                Toast toast=Toast.makeText(getApplicationContext(),"Madhuri from india\nAyesha from bangladesh\nhave been assigned in room 3",Toast.LENGTH_LONG);
+                toast.show();
+            }
+        }
+
+        @Override
+        public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+        }
+    };
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
